@@ -90,3 +90,5 @@ The build artifacts will be stored in the `dist/` directory.
 
 # DevSecOps Lab - canada6838
 # DevSecOps Lab - canada6838
+
+## Lab Setup Complete
