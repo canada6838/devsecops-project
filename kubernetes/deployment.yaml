@@ -5,7 +5,7 @@ metadata:
   labels:
     app: tic-tac-toe
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: tic-tac-toe
@@ -16,9 +16,7 @@ spec:
     spec:
       containers:
       - name: tic-tac-toe
-        image: ghcr.io/canada6838/devsecops-project:sha-7b24c49677db3ba0c6945c657ddbbe48579b3182
-        image: ghcr.io/canada6838/devsecops-project:sha-7b24c49677db3ba0c6945c657ddbbe48579b3182
-        # Image will be automatically updated by CI/CD pipeline
+        image: ghcr.io/canada6838/devsecops-project:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80
@@ -41,5 +39,3 @@ spec:
             port: 80
           initialDelaySeconds: 5
           periodSeconds: 5
-      imagePullSecrets:
-      - name: github-container-registry
